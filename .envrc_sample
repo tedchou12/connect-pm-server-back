@@ -1,0 +1,44 @@
+#MySQL
+export mysql_host='127.0.0.1'
+export mysql_user=<dummy_mysql_user>
+export mysql_pass=<dummy_mysql_pass>
+export mysql_port='8889'
+export mysql_db=<dummy_mysql_db>
+
+#SMTP
+export smtp_from=<dummy_smtp_from>
+export smtp_user=<dummy_smtp_user>
+export smtp_pass=<dummy_smtp_pass>
+export smtp_port=<dummy_smtp_host>
+export smtp_host=<dummy_smtp_host>
+
+#sfdc setup
+export sfdc_endpoint=<dummy_sfdc_endpoint>
+export sfdc_client_id=<dummy_sfdc_client_id>
+export sfdc_client_secret=<dummy_sfdc_client_secret>
+export sfdc_username=<dummy_sfdc_username>
+export sfdc_password=<dummy_sfdc_password>
+
+#one-garden setup
+export one_garden_api_key=<dummy_one_garden_api_key>
+export one_garden_auth=<dummy_one_garden_auth>
+
+#other params
+export flask_secret=<dummy_flask_secret>
+export private_assets_path='private_assets/'
+export resources_path='static/'
+export app_name='HENNGE Customer Portal'
+export hostname='http://localhost:5000/'
+export hostpart='/'
+
+#google oidc
+export google_client_id=<dummy_google_client_id>
+export google_client_secret=<dummy_google_client_secret>
+export google_auth_endpoint='https://accounts.google.com/o/oauth2/auth'
+export google_token_endpoint='https://www.googleapis.com/oauth2/v4/token'
+
+#microsoft oidc
+export microsoft_client_id=<dummy_microsoft_client_id>
+export microsoft_client_secret=<dummy_microsoft_client_secret>
+export microsoft_auth_endpoint='https://login.microsoftonline.com/common/oauth2/v2.0/authorize'
+export microsoft_token_endpoint='https://login.microsoftonline.com/common/oauth2/v2.0/token'

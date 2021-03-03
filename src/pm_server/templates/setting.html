@@ -1,0 +1,25 @@
+<html>
+  {% include "header.html" %}
+  <div class="wrapper">
+    <section class="container">
+      <form method="post" action="">
+        <b>{{ context.lang_lang }}</b>
+        <select name="lang">
+          <option>{{ context.lang_select }}</option>
+          {% if context.val_lang == 'ja' %}
+            <option value="ja" selected>{{ context.lang_ja }}</option>
+          {% else %}
+            <option value="ja">{{ context.lang_ja }}</option>
+          {% endif %}
+          {% if context.val_lang == 'en' %}
+            <option value="en" selected>{{ context.lang_en }}</option>
+          {% else %}
+            <option value="en">{{ context.lang_en }}</option>
+          {% endif %}
+        </select>
+        <input type="submit" name="submit" value="{{ context.lang_save }}" />
+      </form>
+    </section>
+  </div>
+  {% include "footer.html" %}
+</html>

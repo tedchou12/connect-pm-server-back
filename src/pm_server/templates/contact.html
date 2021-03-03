@@ -1,0 +1,48 @@
+<html>
+  {% include "header.html" %}
+  <div class="wrapper">
+    <section class="container">
+      <form method="post" action="">
+        <table class="table table-striped table-bordered table-custom">
+          <thead>
+            <tr>
+              <th scope="col">{{ context.lang_name }}</th>
+              <th scope="col">{{ context.lang_email }}</th>
+              <th scope="col">{{ context.lang_phone }}</th>
+              <th scope="col">{{ context.lang_normal }}</th>
+              <th scope="col">{{ context.lang_renewal }}</th>
+              <th scope="col">{{ context.lang_emergency }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for data in context.val_accounts %}
+              <tr>
+                <th scope="row"><input class="form-control" name="email[]" value="{{ data.account_name }}" /></th>
+                <td><input class="form-control" name="email[]" value="{{ data.account_email }}" /></td>
+                <td><input class="form-control" name="phone[]" value="{{ data.account_phone }}" /></td>
+                {% if data.contact == True %}
+                  <td><input type="checkbox" class="" name="contact[]" value="1" checked/></td>
+                {% else %}
+                  <td><input type="checkbox" class="" name="contact[]" value="1" /></td>
+                {% endif %}
+                {% if data.renew == True %}
+                  <td><input type="checkbox" class="" name="renew[]" value="1" checked/></td>
+                {% else %}
+                  <td><input type="checkbox" class="" name="renew[]" value="1" /></td>
+                {% endif %}
+                {% if data.emergency == True %}
+                  <td><input type="checkbox" class="" name="emergency[]" value="1" checked/></td>
+                {% else %}
+                  <td><input type="checkbox" class="" name="emergency[]" value="1" /></td>
+                {% endif %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <input type="button" class="btn btn-sm btn-default" value="{{ context.lang_cancel }}" onclick="window.location='{{ context.link_home }}'" />
+        <input type="submit" name="submit" class="btn btn-sm btn-primary" value="{{ context.lang_save }}" />
+      </form>
+    </section>
+  </div>
+  {% include "footer.html" %}
+</html>

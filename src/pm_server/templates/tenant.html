@@ -1,0 +1,18 @@
+<html>
+  {% include "header.html" %}
+  <div class="wrapper">
+    <section class="container">
+      <form method="post" action="">
+        <b>{{ context.lang_tenant }}</b>
+        <select name="tenant">
+          <option>{{ context.lang_select }}</option>
+          {% for data in context.val_tenants %}
+            <option value="{{ data.contact_tenant }}">{{ data.contact_tenant }}</option>
+          {% endfor %}
+        </select>
+        <input type="submit" name="submit" value="{{ context.lang_select }}" />
+      </form>
+    </section>
+  </div>
+  {% include "footer.html" %}
+</html>
